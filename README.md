@@ -1,2 +1,2 @@
 # modelWaif
-How thin can I cut my MAE?
+How thin can my MAE be?
