@@ -1,0 +1,4 @@
+Ramsey RESET test using powers of the fitted values of pl
+       Ho:  model has no omitted variables
+                 F(3, 248) =      0.64
+                  Prob > F =      0.5875

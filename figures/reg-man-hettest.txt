@@ -1,0 +1,6 @@
+Breusch-Pagan / Cook-Weisberg test for heteroskedasticity 
+         Ho: Constant variance
+         Variables: fitted values of pl
+
+         chi2(1)      =     1.09
+         Prob > chi2  =   0.2974

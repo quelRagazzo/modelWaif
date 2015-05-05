@@ -1,0 +1,50 @@
+. stepwise , pr(0.05) : regress pl  aget bar2 bar3 bar4 basement baths br cac recond deck distFire fp garage lotSiz
+> e monthSold smoker sqftt if model
+                      begin with full model
+p = 0.8812 >= 0.0500  removing monthSold
+p = 0.8667 >= 0.0500  removing bar2
+p = 0.1947 >= 0.0500  removing deck
+p = 0.1711 >= 0.0500  removing distFire
+p = 0.2234 >= 0.0500  removing baths
+p = 0.0698 >= 0.0500  removing cac
+p = 0.0734 >= 0.0500  removing smoker
+
+      Source |       SS       df       MS              Number of obs =     250
+-------------+------------------------------           F( 10,   239) =  177.66
+       Model |  20.5458051    10  2.05458051           Prob > F      =  0.0000
+    Residual |  2.76395908   239  .011564682           R-squared     =  0.8814
+-------------+------------------------------           Adj R-squared =  0.8765
+       Total |  23.3097642   249  .093613511           Root MSE      =  .10754
+
+------------------------------------------------------------------------------
+          pl |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        aget |  -.1058091   .0094444   -11.20   0.000    -.1244141   -.0872041
+     lotSize |   .0000131   2.45e-06     5.32   0.000     8.22e-06    .0000179
+        bar3 |   .0695827    .029167     2.39   0.018     .0121255    .1270399
+        bar4 |   .1370819   .0247909     5.53   0.000     .0882453    .1859184
+    basement |   .0001652   .0000215     7.67   0.000     .0001227    .0002076
+      garage |   .0908664   .0150552     6.04   0.000     .0612085    .1205242
+          br |  -.0603909   .0134081    -4.50   0.000     -.086804   -.0339778
+          fp |   .0285014   .0128621     2.22   0.028     .0031639     .053839
+      recond |   .0359796   .0130071     2.77   0.006     .0103564    .0616029
+       sqftt |    .027752   .0023803    11.66   0.000      .023063     .032441
+       _cons |   10.67145   .1089018    97.99   0.000     10.45692    10.88598
+
+                    Skewness/Kurtosis tests for Normality
+                                                         ------- joint ------
+    Variable |    Obs   Pr(Skewness)   Pr(Kurtosis)  adj chi2(2)    Prob>chi2
+-------------+---------------------------------------------------------------
+        sres |    250      0.7106         0.0471         4.11         0.1282
+
+Ramsey RESET test using powers of the fitted values of pl
+       Ho:  model has no omitted variables
+                 F(3, 236) =      1.32
+                  Prob > F =      0.2675
+
+Breusch-Pagan / Cook-Weisberg test for heteroskedasticity 
+         Ho: Constant variance
+         Variables: fitted values of pl
+
+         chi2(1)      =     0.78
+         Prob > chi2  =   0.3771

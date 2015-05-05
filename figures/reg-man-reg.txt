@@ -1,0 +1,37 @@
+. regress pl aget sqftt bar4 lotSize fpp garage if model
+
+      Source |       SS       df       MS              Number of obs =     258
+-------------+------------------------------           F(  6,   251) =  214.27
+       Model |   20.007548     6  3.33459133           Prob > F      =  0.0000
+    Residual |   3.9062121   251  .015562598           R-squared     =  0.8367
+-------------+------------------------------           Adj R-squared =  0.8327
+       Total |  23.9137601   257   .09304965           Root MSE      =  .12475
+
+------------------------------------------------------------------------------
+          pl |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        aget |  -.1221579   .0096961   -12.60   0.000     -.141254   -.1030619
+       sqftt |   .0205386   .0023146     8.87   0.000     .0159801    .0250972
+        bar4 |   .1141497   .0249036     4.58   0.000      .065103    .1631965
+     lotSize |   .0000216   2.61e-06     8.27   0.000     .0000165    .0000268
+         fpp |   .0466525   .0175641     2.66   0.008     .0120608    .0812443
+      garage |   .1355746   .0166735     8.13   0.000     .1027369    .1684123
+       _cons |   11.01223   .0885233   124.40   0.000     10.83789    11.18657
+
+                    Skewness/Kurtosis tests for Normality
+                                                         ------- joint ------
+    Variable |    Obs   Pr(Skewness)   Pr(Kurtosis)  adj chi2(2)    Prob>chi2
+-------------+---------------------------------------------------------------
+        sres |    258      0.2688         0.6997         1.38         0.5008
+
+Ramsey RESET test using powers of the fitted values of pl
+       Ho:  model has no omitted variables
+                 F(3, 248) =      0.64
+                  Prob > F =      0.5875
+
+Breusch-Pagan / Cook-Weisberg test for heteroskedasticity 
+         Ho: Constant variance
+         Variables: fitted values of pl
+
+         chi2(1)      =     1.09
+         Prob > chi2  =   0.2974

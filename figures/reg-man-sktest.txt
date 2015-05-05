@@ -1,0 +1,17 @@
+                    Skewness/Kurtosis tests for Normality
+                                                         ------- joint ------
+    Variable |    Obs   Pr(Skewness)   Pr(Kurtosis)  adj chi2(2)    Prob>chi2
+-------------+---------------------------------------------------------------
+        sres |    258      0.2688         0.6997         1.38         0.5008
+
+Ramsey RESET test using powers of the fitted values of pl
+       Ho:  model has no omitted variables
+                 F(3, 248) =      0.64
+                  Prob > F =      0.5875
+
+Breusch-Pagan / Cook-Weisberg test for heteroskedasticity 
+         Ho: Constant variance
+         Variables: fitted values of pl
+
+         chi2(1)      =     1.09
+         Prob > chi2  =   0.2974

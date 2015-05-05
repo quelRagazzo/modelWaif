@@ -1,0 +1,24 @@
+. sktest sres if model
+
+                    Skewness/Kurtosis tests for Normality
+                                                         ------- joint ------
+    Variable |    Obs   Pr(Skewness)   Pr(Kurtosis)  adj chi2(2)    Prob>chi2
+-------------+---------------------------------------------------------------
+        sres |    250      0.7106         0.0471         4.11         0.1282
+
+. ovtest
+
+Ramsey RESET test using powers of the fitted values of pl
+       Ho:  model has no omitted variables
+                 F(3, 236) =      1.32
+                  Prob > F =      0.2675
+
+. hettest
+
+Breusch-Pagan / Cook-Weisberg test for heteroskedasticity 
+         Ho: Constant variance
+         Variables: fitted values of pl
+
+         chi2(1)      =     0.78
+         Prob > chi2  =   0.3771
+
