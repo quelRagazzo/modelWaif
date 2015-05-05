@@ -121,7 +121,7 @@ us a line that, if the distribution were normal, the scattered points would fall
 that a natural log transform gives us a roughly normal fit.
 
 This will force us to adjust our interpretations of the coefficients\footnote{I learned what
-I know of this from  \url{"http://www.biostathandbook.com/transformation.html"} but all misunderstanding are my own.}.
+I know of this from  \url{"http://www.biostathandbook.com/transformation.html"} but all misunderstandings are my own.}.
 Using the log means coefficients represent the percentage change in our dependent variable based on change in the predictor.
 But this is better than restricting the range of values our model can reasonably predict for.
 \begin{figure}[H]
@@ -373,7 +373,7 @@ I pass.
 
 %----------------------------->8   Section   >8---------------------------------
 
-\section{Good Knife Work?}
+\section*{Good Knife Work?}
 So I decided to make my own regression choices and attempt to find a more parsimonious model.
 One thing I was hoping to not lose so many observations to outliers in predictor variables.
 There was some initial success as I had 18 more observations to start,
@@ -382,7 +382,7 @@ Still, I removed less than 20\% but still a lot.
 
 %--
 
-\subsection{Technical Analyis}
+\subsection*{Technical Analyis}
 Technically, the model is sound, noted in Listing~\ref{fig:model-reg}.
 The p-value (Prob $>$ F) is $<0.0001$, so we need at least some of our variables in the model.
 Each variable is confirmed by its respective p-value $<0.05$.
@@ -408,7 +408,7 @@ again we fail to reject and this model looks good.
 
 %--
 
-\subsection{Interpretation}
+\subsection*{Interpretation}
 Our model predicts the natural log ($x$) of $salesprice$:
 
 \begin{math}
@@ -439,7 +439,7 @@ The lower bound will be closer to the estimate than the upper bound.
 
 %--
 
-\subsection{Notes and Caveats}
+\subsection*{Notes and Caveats}
 I did predict for a 100 year 200 sqft house on a 500 sqft lot with nothing and got a prediction \$$42,844$.
 
 I would like to research and understand better the idea of a percentage increase for things like ``if fireplaces'' and garage spots. This seems to run a counter to what I've seen.
